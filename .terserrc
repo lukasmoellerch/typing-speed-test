@@ -1,0 +1,9 @@
+{
+    "compress": {
+        "dead_code": true,
+        "booleans_as_integers": true,
+        "drop_console": false,
+        "passes": 5
+    },
+    "mangle": {}
+}

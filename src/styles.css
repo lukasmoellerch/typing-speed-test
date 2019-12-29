@@ -1,0 +1,139 @@
+:global #game {
+	width: 100vw;
+	height: 100vh;
+	max-height: 600px;
+	position: relative;
+}
+
+:global .stats {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2rem;
+	color: #fefefe;
+	padding: 1em;
+	line-height: 2em;
+}
+
+:global h1 {
+	font-family: 'Roboto Slab', serif;
+	padding: 1em;
+	color: #fefefe;
+	font-size: 4rem;
+	margin: 0;
+	text-align: right;
+}
+
+body {
+	background-color: #2f3542;
+	margin: 0;
+	transition: background 0.3s;
+}
+
+.center-marker {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background-color: black;
+	width: 5px;
+	height: 5px;
+	transform: translate(-50%, -50%);
+}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	padding-top: 1.1em;
+	padding-bottom: 1.3em;
+	height: 1em;
+	font-size: 2.5rem;
+	font-family: 'Roboto Slab', serif;
+	color: #fefefe;
+	border-top: 0.5px solid #57606f;
+	border-bottom: 0.5px solid #57606f;
+	overflow-x: hidden;
+}
+
+.wrapper .text {
+	position: absolute;
+	left: 50%;
+	white-space: nowrap;
+	transition: transform 0.2s;
+}
+
+.wrapper .text .written .old {
+	color: #dcdde1;
+}
+
+.wrapper .text .written .old .incorrect {
+	color: #ff7f50;
+	text-decoration: line-through;
+	display: inline-block;
+}
+
+.wrapper .text .written .old .correct {
+	color: #7bed9f;
+	animation-name: bounceIn;
+	animation-duration: 1s;
+	display: inline-block;
+}
+
+.wrapper .text .written .currentWord {
+	position: relative;
+}
+
+.wrapper .text .written .currentWord .input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'Merriweather', serif;
+	bottom: 0;
+	background-color: transparent;
+	color: transparent;
+	display: block;
+	border: none;
+}
+
+.wrapper .text .written .currentWord .input:focus {
+	outline: none;
+}
+
+.wrapper .text .written .currentWord .correct {
+	color: #2ed573;
+}
+
+.wrapper .text .written .currentWord .incorrect {
+	text-decoration: line-through;
+	color: #ff6348;
+}
+
+.wrapper .text .otherWords {
+	color: #bec6d0;
+}
+
+@keyframes bounceIn {
+	from, 20%, 40%, 60%, 80%, to {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	20% {
+		opacity: 1;
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+	40% {
+		transform: scale3d(0.9, 0.9, 0.9);
+	}
+	60% {
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+	80% {
+		transform: scale3d(0.97, 0.97, 0.97);
+	}
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}

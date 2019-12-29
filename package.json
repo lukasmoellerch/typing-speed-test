@@ -1,0 +1,39 @@
+{
+  "name": "empty-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -r dist",
+    "start": "parcel src/index.html",
+    "build-prod": "parcel build src/index.html --experimental-scope-hoisting"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "postcss-modules": "^1.4.1",
+    "prettier": "^1.18.2",
+    "sass": "^1.24.0",
+    "typescript": "^3.7.4"
+  },
+  "postcss": {
+    "modules": true,
+    "plugins": {
+      "postcss-modules": {
+        "generateScopedName": "[sha1:hash:base64:5]",
+        "globalModulePaths": [
+          ".global."
+        ],
+        "root": "."
+      },
+      "autoprefixer": {
+        "grid": true
+      }
+    }
+  }
+}
