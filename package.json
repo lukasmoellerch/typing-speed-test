@@ -25,7 +25,6 @@
     "modules": true,
     "plugins": {
       "postcss-modules": {
-        "generateScopedName": "[sha1:hash:base64:5]",
         "globalModulePaths": [
           ".global."
         ],
