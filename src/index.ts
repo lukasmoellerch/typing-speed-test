@@ -7,7 +7,7 @@ if (module.hot) {
 }
 const start = [47, 53, 66];
 const end = [83, 82, 237];
-function shuffle(array) {
+function shuffle<T>(array: T[]) {
     for (let m = array.length; m; m--) {
         let i = Math.random() * m | 0;
         let t = array[m];
