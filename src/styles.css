@@ -86,12 +86,16 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-family: 'Merriweather', serif;
+	font-family: Roboto slab, serif;
 	bottom: 0;
+	padding: 0;
 	background-color: transparent;
 	color: transparent;
 	display: block;
 	border: none;
+	font-size: 1em;
+	margin: 0;
+	caret-color: #dcdde1;
 }
 
 .wrapper .text .written .currentWord .input:focus {
