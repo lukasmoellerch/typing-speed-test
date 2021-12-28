@@ -92,6 +92,12 @@ export function createGame(rootEl: HTMLElement, handlers: Handlers = {}): Game {
         const current = words[wordIndex];
         const value = inputEl.value;
 
+
+        let i = 0;
+        while (i < current.length && i < value.length && value[i] === current[i]) {
+            i++;
+        }
+
         totalCharsByMillis.push([startDiff, buffer.length + value.length]);
         if (value.indexOf(" ") !== -1) {
             if (value === current + " ") {
@@ -101,7 +107,7 @@ export function createGame(rootEl: HTMLElement, handlers: Handlers = {}): Game {
                 oldEl.appendChild(el);
             } else {
                 const el = document.createElement("span");
-                el.innerText = value;
+                el.innerText = value.substring(0, value.length - 1) + current.substring(i) + " ";
                 el.classList.add(styles.incorrect);
                 oldEl.appendChild(el);
             }
@@ -123,10 +129,7 @@ export function createGame(rootEl: HTMLElement, handlers: Handlers = {}): Game {
             }
             return;
         }
-        let i = 0;
-        while (i < current.length && i < value.length && value[i] === current[i]) {
-            i++;
-        }
+
         if (handlers.onProgress) {
             handlers.onProgress(wordIndex + (i / current.length));
         }
