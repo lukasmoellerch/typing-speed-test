@@ -1,38 +1,16 @@
 {
-  "name": "empty-project",
+  "name": "typing-speed-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "scripts": {
-    "clean": "rm -r dist",
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html --experimental-scope-hoisting"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.8.8",
-    "parcel-bundler": "^1.12.5",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "postcss-modules": "^1.5.0",
-    "prettier": "^1.18.2",
-    "sass": "^1.45.1",
-    "typescript": "^3.9.10"
-  },
-  "postcss": {
-    "modules": true,
-    "plugins": {
-      "postcss-modules": {
-        "globalModulePaths": [
-          ".global."
-        ],
-        "root": "."
-      },
-      "autoprefixer": {
-        "grid": true
-      }
-    }
+    "parcel": "^2.10.0"
   }
 }

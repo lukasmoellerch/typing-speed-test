@@ -1,4 +1,7 @@
-import styles from "./styles.css";
+import * as styles from "./styles.module.css";
+
+console.log(styles)
+
 interface Stats {
     totalCharsByMillis: [number, number][];
     totalWordsByMillis: [number, number][];

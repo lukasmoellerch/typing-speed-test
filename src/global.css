@@ -1,0 +1,29 @@
+#game {
+	width: 100vw;
+	height: 100vh;
+	max-height: 600px;
+	position: relative;
+}
+
+.stats {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2rem;
+	color: #fefefe;
+	padding: 1em;
+	line-height: 2em;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	padding: 1em;
+	color: #fefefe;
+	font-size: 4rem;
+	margin: 0;
+	text-align: right;
+}
+
+body {
+	background-color: #2f3542;
+	margin: 0;
+	transition: background 0.3s;
+}
